@@ -16,6 +16,14 @@ davisdata <- read.csv(file="UCDavis.csv")
 ```
 Our Goal is to answer this question: Is there a difference between the alcohol consumed between the row you choose to sit in??
 
+## Introduction
+Question: Is there a relationship between where you sit in class and how much you drink? Data from UC Davis.
+
+$H_0$ : There's no relationship between where you sit in class and how much you drink...what foolishness.  
+
+$H_A$ : There is a relationship between where you sit and class and how much you drink!  
+
+## Methods
 
 ## Now add in boxplot
 
