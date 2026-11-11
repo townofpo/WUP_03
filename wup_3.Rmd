@@ -12,6 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r include=FALSE}
 require(tidyverse)
 require(tigerstats)
+require(mosaic)
 davisdata <- read.csv(file="UCDavis.csv")
 ```
 Our Goal is to answer this question: Is there a difference between the alcohol consumed between the row you choose to sit in??
@@ -28,16 +29,20 @@ Seat is categorical, alcohol is numerical, as in number of ounces consumed per w
 
 # Data Summaries
 
-```{r}
-boxplot(alcohol~Seat,data=davisdata)
-```
-Students sitting in the back seat appear to drink more ounces per week of alcohol than students sitting in the front/middle.
 
 ## Now add in boxplot
 
-
+```{r}
+boxplot(alcohol~Seat,data=davisdata)
+```
+Students sitting in the back seat appear to drink more ounces per week of alcohol than students sitting in the front/middle.  
 
 ## Numerical Summaries 
+```{r}
+favstats(alcohol~Seat,data = davisdata)
+```
+The numerical summary appears to show that students sitting in the back seat have a higher median, mean and sd, with a higher number meaning a higher number of ounces of alcohol consumed.  
+On average students in the back drink 14.25 ounces a week, and students in the front and the middle only drink 2 or 3 ounces a week.  
 
 ## Inferential Tests
 
