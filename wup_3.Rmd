@@ -18,7 +18,8 @@ davisdata <- read.csv(file="UCDavis.csv")
 Our Goal is to answer this question: Is there a relationship between the alcohol consumed between the row you choose to sit in??
 
 # Introduction
-Question: Is there a relationship between where you sit in class and how much you drink? Data from UC Davis.
+Question: Is there a relationship between where you sit in class and how much you drink? 
+Data from UC Davis.
 
 $H_0$ : There's no relationship between where you sit in class and how much you drink...what foolishness.  
 
@@ -55,11 +56,10 @@ The p value here is 0.000116, which is less than 0.05, so we reject the null hyp
 plot(TukeyHSD(model1))
 ```
 
-The Tukey graph shows that there is a clear difference in alcohol consumption between students who sit in the Front-Back and Middle-Back. There is no different between the students who sit in the Middle-Front, however. 
+The Tukey graph shows that there is a clear difference in alcohol consumption between students who sit in the Front-Back and Middle-Back. There is no difference between the students who sit in the Middle-Front, however. 
 
 ## Conclusions
 
-Original question: 
+Original question: Is there a relationship between where you sit in class and how much you drink? 
 
-
-
+Based on the anova and the Tukey test comparing the means of the seating arrangements (front, middle and back) and their respective alcohol consumption, we found that there is a difference in the number of alcohol ounces and seating arrangement and this is supported by the graphical and numerical descriptive results. More precisely, there is a difference between students who sit in the Front-Back, and Middle-Back, but there is no difference between students who sit in the Middle-Front.
