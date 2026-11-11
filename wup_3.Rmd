@@ -15,7 +15,7 @@ require(tigerstats)
 require(mosaic)
 davisdata <- read.csv(file="UCDavis.csv")
 ```
-Our Goal is to answer this question: Is there a difference between the alcohol consumed between the row you choose to sit in??
+Our Goal is to answer this question: Is there a relationship between the alcohol consumed between the row you choose to sit in??
 
 # Introduction
 Question: Is there a relationship between where you sit in class and how much you drink? Data from UC Davis.
@@ -45,7 +45,21 @@ The numerical summary appears to show that students sitting in the back seat hav
 On average students in the back drink 14.25 ounces a week, and students in the front and the middle only drink 2 or 3 ounces a week.  
 
 ## Inferential Tests
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+The p value here is 0.000116, which is less than 0.05, so we reject the null hypothesis and conclude that there is indeed a relationship between the seating location and the ounces of alcohol consumed.
+
+```{r}
+plot(TukeyHSD(model1))
+```
+
+The Tukey graph shows that there is a clear difference in alcohol consumption between students who sit in the Front-Back and Middle-Back. There is no different between the students who sit in the Middle-Front, however. 
 
 ## Conclusions
+
+Original question: 
+
 
 
