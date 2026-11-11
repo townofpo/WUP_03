@@ -16,14 +16,22 @@ davisdata <- read.csv(file="UCDavis.csv")
 ```
 Our Goal is to answer this question: Is there a difference between the alcohol consumed between the row you choose to sit in??
 
-## Introduction
+# Introduction
 Question: Is there a relationship between where you sit in class and how much you drink? Data from UC Davis.
 
 $H_0$ : There's no relationship between where you sit in class and how much you drink...what foolishness.  
 
 $H_A$ : There is a relationship between where you sit and class and how much you drink!  
 
-## Methods
+# Methods
+Seat is categorical, alcohol is numerical, as in number of ounces consumed per week. Numerical~Cat helper file used.
+
+# Data Summaries
+
+```{r}
+boxplot(alcohol~Seat,data=davisdata)
+```
+Students sitting in the back seat appear to drink more ounces per week of alcohol than students sitting in the front/middle.
 
 ## Now add in boxplot
 
